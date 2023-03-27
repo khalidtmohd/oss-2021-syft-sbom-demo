@@ -10,7 +10,7 @@ pipeline {
     stage('Build image and tag with build number') {
       steps {
         script {
-          sh 'sudo docker build -t ${REPOSITORY}:${BUILD_NUMBER} .'
+          sh 'docker build -t ${REPOSITORY}:${BUILD_NUMBER} .'
         }
 
       }
